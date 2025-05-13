@@ -1,0 +1,623 @@
+/* CSS Variables for colors and fonts */
+:root {
+    --color-primary: #d4af37;
+    --color-primary-dark: #bfa233;
+    --color-primary-darker: #a68f2a;
+    --color-text-light: #f0e6d2;
+    --color-text-dark: #1a1a1a;
+    --color-bg-dark: #1a1a1a;
+    --color-bg-darker: #111;
+    --color-footer-bg: #1a1a1a;
+    --color-footer-text: var(--color-primary);
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
+    --font-footer: 'Poppins', sans-serif;
+}
+
+/* General Styles */
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--color-text-light);
+    background-color: var(--color-bg-dark);
+    padding-top: 70px; /* for fixed navbar */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    color: var(--color-text-light);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+/* Navbar */
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: var(--color-primary);
+}
+
+/* Hero Section */
+#hero {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+}
+
+#hero p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    color: var(--color-text-dark);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-darker);
+    color: var(--color-text-dark);
+}
+
+/* Button group to keep buttons in one line */
+.button-group {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Ghost Carousel Styles */
+.ghost-carousel {
+    background-color: transparent;
+    position: relative;
+}
+
+.ghost-carousel .carousel-inner {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.ghost-carousel .carousel-item img {
+    filter: brightness(0.85);
+    transition: filter 0.3s ease;
+}
+
+.ghost-carousel .carousel-item.active img {
+    filter: brightness(1);
+}
+
+.ghost-control {
+    filter: invert(1);
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.ghost-control:hover {
+    opacity: 1;
+}
+
+/* Upper button bottom margin */
+.upper-btn {
+    margin-bottom: 1rem;
+}
+
+/* Ghost Mouse Pointer */
+#ghostCursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 60px;
+    background: rgba(212, 175, 55, 0.4);
+    border: 2px solid var(--color-primary);
+    border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: background 0.3s ease, transform 0.1s ease;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    box-shadow: 0 0 10px var(--color-primary);
+}
+
+#ghostCursor::before,
+#ghostCursor::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    width: 8px;
+    height: 8px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--color-primary);
+}
+
+#ghostCursor::before {
+    left: 30%;
+}
+
+#ghostCursor::after {
+    right: 30%;
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    background-color: var(--color-primary);
+    color: var(--color-text-dark);
+    border: none;
+    border-radius: 50%;
+    padding: 12px 16px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.6);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-dark);
+}
+
+/* Sections */
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+section h2 {
+    font-size: 2.75rem;
+    margin-bottom: 40px;
+    color: var(--color-text-light);
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #2a2a2a;
+    color: var(--color-text-light);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Instructors */
+.card-img-top.rounded-circle {
+    border: 5px solid var(--color-primary);
+}
+
+/* Gallery */
+#gallery img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 0;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+/* Gallery image before/after */
+#gallery img::before,
+#gallery img::after {
+    content: "";
+    position: absolute;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+#gallery img::before {
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid var(--color-primary);
+    transform: scale(0.9);
+}
+
+#gallery img::after {
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border: 2px solid var(--color-bg-dark);
+    transform: scale(0.8);
+}
+
+#gallery img:hover::before,
+#gallery img:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Class image */
+.class-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.class-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px var(--color-primary);
+    z-index: 10;
+}
+
+.class-image::before,
+.class-image::after {
+    content: "";
+    position: absolute;
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.class-image::before {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 3px solid var(--color-primary);
+    transform: scale(0.95);
+}
+
+.class-image::after {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 3px solid var(--color-bg-dark);
+    transform: scale(0.9);
+}
+
+.class-image:hover::before,
+.class-image:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Class price */
+.class-price {
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    padding: 5px 15px;
+    border-radius: 25px;
+    border: 2px solid var(--color-primary);
+    transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+    z-index: 0;
+}
+
+.class-price::before,
+.class-price::after {
+    content: "";
+    position: absolute;
+    border-radius: 25px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.class-price::before {
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid var(--color-primary);
+    transform: scale(0.9);
+}
+
+.class-price::after {
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid var(--color-bg-dark);
+    transform: scale(0.8);
+}
+
+.class-price:hover {
+    color: var(--color-text-dark);
+    background-color: var(--color-primary);
+    box-shadow: 0 8px 15px rgba(212, 175, 55, 0.6);
+}
+
+.class-price:hover::before,
+.class-price:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Instructor image */
+.instructor-image {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    z-index: 0;
+}
+
+.instructor-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 25px var(--color-primary);
+    z-index: 10;
+}
+
+.instructor-image::before,
+.instructor-image::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.instructor-image::before {
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 3px solid var(--color-primary);
+    transform: scale(0.95);
+}
+
+.instructor-image::after {
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    border: 3px solid var(--color-bg-dark);
+    transform: scale(0.9);
+}
+
+.instructor-image:hover::before,
+.instructor-image:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Map */
+#map {
+    border: 2px solid var(--color-primary);
+    border-radius: 10px;
+}
+
+/* Responsive iframe container for map */
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+}
+
+/* Contact Form */
+form {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(191, 162, 51, 0.4);
+    position: relative;
+    overflow: hidden;
+    font-family: var(--font-footer);
+}
+
+form::before,
+form::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.3;
+    filter: blur(60px);
+    z-index: 0;
+}
+
+form::before {
+    width: 200px;
+    height: 200px;
+    background: var(--color-primary-dark);
+    top: -50px;
+    left: -50px;
+}
+
+form::after {
+    width: 300px;
+    height: 300px;
+    background: var(--color-primary);
+    bottom: -100px;
+    right: -100px;
+}
+
+form label {
+    font-weight: 700;
+    color: var(--color-text-dark);
+    position: relative;
+    z-index: 1;
+}
+
+form .form-control {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+form .form-control:focus {
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+    outline: none;
+}
+
+form .btn-primary {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: var(--color-primary-dark);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    z-index: 1;
+    color: var(--color-text-dark);
+}
+
+form .btn-primary:hover {
+    background: var(--color-primary);
+    box-shadow: 0 0 15px 5px rgba(212, 175, 55, 0.7);
+}
+
+/* Footer */
+footer {
+    font-size: 0.9rem;
+    font-family: var(--font-footer);
+    color: var(--color-text-light);
+    background-color: var(--color-bg-darker);
+}
+
+/* Utility */
+.text-center {
+    text-align: center !important;
+    color: var(--color-primary);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--color-footer-bg);
+    color: var(--color-text-light);
+    font-family: var(--font-footer);
+}
+
+.footer h5 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer p, .footer a, .footer small {
+    color: var(--color-footer-text);
+}
+
+.footer a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--color-primary-dark);
+}
+
+.footer .social-icons a {
+    font-size: 1.5rem;
+}
+
+.footer ul {
+    padding-left: 0;
+}
+
+.footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+    color: var(--color-footer-text);
+}
+
+.footer ul li a:hover {
+    color: var(--color-primary-dark);
+}
+
+.footer hr {
+    border-color: #444;
+    margin: 1.5rem 0;
+}
+
+@media (max-width: 767.98px) {
+    .footer .row > div {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Fix inconsistent utility class color */
+.text-center {
+    color: var(--color-primary);
+}
+
+/* About section paragraph color override */
+#about p {
+    color: royalblue;
+}

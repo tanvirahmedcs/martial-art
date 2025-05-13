@@ -1,0 +1,37 @@
+Presentation Report: Martial Arts Academy Website
+
+1. Introduction
+The Martial Arts Academy website is a branded, multipage website designed to provide comprehensive information about the academy's offerings, instructors, classes, and contact options. The website aims to engage potential students by showcasing realistic content, professional design, and user-friendly navigation, aligning with the project’s learning outcomes.
+
+2. Learning Outcome 3 (LO3): Utilizing Website Technologies, Tools, and Techniques
+The website leverages modern web technologies including HTML5, CSS3, Bootstrap 5, JavaScript, and PHP to create a responsive, interactive, and multipage website. Good design principles such as consistency, usability, accessibility, and responsiveness are applied throughout the site. External libraries like FontAwesome, Animate.css, and WOW.js enhance the user experience with animations and icons, demonstrating effective use of tools and techniques.
+
+3. Design Document and Medium Fidelity Wireframes (P5)
+A detailed design document was developed to guide the website’s creation, including medium fidelity wireframes that outline the layout and structure of each page. The document captures a full set of client and user requirements, ensuring the website meets the needs of its target audience. This structured approach supports the creation of a cohesive branded multipage website.
+
+4. Using the Design Document with Appropriate Principles (P6)
+The website was developed strictly following the design document, adhering to principles, standards, and guidelines for branding, layout, and content. The dark theme with gold accents reflects the martial arts brand identity, while the multipage structure supports easy navigation and content organization. Realistic content such as detailed class descriptions, instructor bios, and pricing information supports user engagement and brand consistency.
+
+5. Justification of Implementation Decisions (M4)
+Implementation decisions, such as using Bootstrap for responsive design, PHP for backend form processing, and modals for detailed information, were made to align with the design document goals. These choices ensure the website is maintainable, scalable, and provides a seamless user experience. The use of external libraries was justified by their ability to enhance functionality and aesthetics efficiently.
+
+6. Evaluation of Design and Development Process (D2)
+The design and development process was iterative, involving continuous testing and refinement. Challenges included integrating backend PHP scripts securely and ensuring cross-browser compatibility. These were addressed through rigorous testing, validation, and adherence to web standards. The process successfully delivered a branded, multipage website meeting the initial requirements and client expectations.
+
+7. Learning Outcome 4 (LO4): Test Plan Creation (P7)
+A comprehensive test plan was created to review key performance areas including form functionality, responsiveness across devices, navigation usability, and content accuracy. Testing involved manual checks and validation tools to ensure the website performs as expected under various conditions.
+
+8. Quality Assurance Analysis (M5)
+The QA process included code reviews, usability testing, and validation against the design document. Feedback was incorporated to improve form validation, accessibility features, and responsive behavior, ensuring a high-quality user experience. Continuous integration of feedback helped maintain alignment with project goals.
+
+9. Test Plan Results and Recommendations (D3)
+Testing confirmed the website functions correctly with responsive design, accessible navigation, and accurate content display. Recommendations for improvement include adding automated testing, enhancing SEO, and expanding backend security measures to further improve performance and maintainability.
+
+10. Future Improvements
+Future enhancements could include implementing automated testing frameworks, optimizing SEO strategies, integrating advanced security protocols, and expanding interactive features such as live chat or user accounts to increase engagement and functionality.
+
+11. Summary
+The Martial Arts Academy website effectively combines branding, realistic content, and user-centered design to create an engaging online presence. It meets client and user requirements by providing comprehensive information, easy navigation, and functional interaction points. The use of modern web standards and technologies ensures maintainability and scalability, fulfilling the project’s learning outcomes and assessment criteria.
+
+Prepared by: Tanvir Ahmed
+Date: 2024-06
